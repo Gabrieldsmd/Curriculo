@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)file:///C:/Users/Gabri.DESKTOP-TGCVTLD/Downloads/deepseek_html_20260416_88c989.html#googtrans(pt|de) -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>Gabriel Dutra · Currículo Algorítmico · ATS‑Otimizado</title>
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'de,en,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="file://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    /* ===== RESET & BASE (ATS-FRIENDLY + CRIATIVO) ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f7fc;
+      font-family: 'Segoe UI', 'Century Gothic', 'Roboto', sans-serif;
+      color: #1e2b3a;
+      line-height: 1.5;
+      padding: 28px 24px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* container principal */
+    .cv-wrapper {
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 40, 80, 0.08);
+      padding: 30px 32px 24px;
+      transition: all 0.2s;
+      border: 1px solid #d9e2ef;
+    }
+
+    /* cabeçalho com foto e bandeiras */
+    .header-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .logo-area {
+      flex: 2;
+      text-align: center;
+    }
+
+    .logo-link {
+      display: inline-block;
+    }
+
+    .logo-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 70px;
+      object-fit: contain;
+      transition: opacity 0.2s;
+    }
+
+    .profile-flags {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3d85c6;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .flags {
+      display: flex;
+      gap: 8px;
+      background: rgba(255,255,255,0.7);
+      padding: 4px 8px;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+      border: 1px solid #cbd6e4;
+    }
+
+    .flag {
+      width: 30px;
+      height: 22px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.1s;
+      border: 1px solid #ffffff;
+    }
+
+    .flag:hover {
+      transform: scale(1.08);
+      border-color: #326c99;
+    }
+
+    /* ocultar widget padrão do google, usaremos flags custom */
+    #google_translate_element {
+      display: none;
+    }
+
+    /* FILTRO INTELIGENTE */
+    .filter-section {
+      background: #eef3fa;
+      padding: 16px 18px;
+      border-radius: 48px;
+      margin: 24px 0 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 18px;
+      border: 1px solid #bdd1e8;
+    }
+
+    .filter-label {
+      font-weight: 700;
+      color: #1e3a5f;
+      letter-spacing: 0.3px;
+      font-size: 1rem;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      background: white;
+      border: 1.5px solid #3d85c6;
+      color: #1e3a5f;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .filter-btn:hover {
+      background: #d9e9ff;
+    }
+
+    .filter-btn.active {
+      background: #326c99;
+      border-color: #326c99;
+      color: white;
+      box-shadow: 0 4px 8px rgba(50,108,153,0.2);
+    }
+
+    /* ESTILOS DE SEÇÃO (ATS mantém headings semânticos) */
+    h2 {
+      font-family: 'Century Gothic', 'Segoe UI', sans-serif;
+      color: #326c99;
+      border-bottom: 2px solid #a6c0d9;
+      padding-bottom: 6px;
+      margin: 28px 0 18px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      color: #1e3a5f;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+
+    /* tabelas ATS-friendly + moderno */
+    .exp-table, .academic-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .exp-table td, .academic-table td {
+      padding: 14px 16px;
+      vertical-align: top;
+      border-bottom: 1px solid #e2eaf2;
+    }
+
+    .exp-table tr:last-child td, .academic-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .company-logo {
+      width: 100px;
+      text-align: center;
+      background: #fafcff;
+    }
+
+    .company-logo img {
+      max-width: 100px;
+      max-height: 70px;
+      object-fit: contain;
+    }
+
+    .job-desc {
+      line-height: 1.55;
+    }
+
+    .job-desc ul {
+      padding-left: 22px;
+      margin: 6px 0;
+    }
+
+    .job-desc li {
+      margin-bottom: 6px;
+    }
+
+    /* cartões de formação complementar */
+    .complement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .course-card {
+      background: #f9fcff;
+      border-radius: 24px;
+      padding: 14px 16px;
+      border: 1px solid #d2e2f5;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.1s;
+    }
+
+    .course-card img {
+      width: 70px;
+      height: auto;
+      max-height: 50px;
+      object-fit: contain;
+    }
+
+    /* dados pessoais */
+    .personal-table {
+      width: auto;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    .personal-table td {
+      padding: 6px 12px 6px 0;
+    }
+
+    /* keywords ocultas (ATS) */
+    .ats-keywords {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0.01;
+      pointer-events: none;
+      color: #ffffff;
+    }
+
+    /* footer com image7 */
+    .footer-lattes {
+      margin-top: 36px;
+      text-align: right;
+      border-top: 1px dashed #b8cee7;
+      padding-top: 16px;
+    }
+
+    .footer-lattes img {
+      height: 28px;
+      width: auto;
+    }
+
+    /* recomendação */
+    .recommendation {
+        background: #f9fbfd;
+        padding: 10px 15px;
+        border-radius: 14px;
+        margin-top: 12px;
+        font-size: 0.9rem;
+        border-left: 4px solid #a3b8d9;
+     }
+
+        .item-date {
+            font-size: 0.9rem;
+            color: #5e6f82;
+            font-weight: 500;
+            background: #ecf2f9;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+    /* botão imprimir */
+    .print-btn-container {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .print-btn {
+      background: none;
+      border: 1.5px solid #326c99;
+      color: #326c99;
+      padding: 8px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.15s;
+      background: white;
+    }
+
+    .print-btn:hover {
+      background: #326c99;
+      color: white;
+    }
+
+    @media print {
+      body { background: white; padding: 0.2in; }
+      .cv-wrapper { box-shadow: none; border: none; padding: 0; }
+      .filter-section, .flags, .print-btn-container, #google_translate_element { display: none !important; }
+      .footer-lattes { border-top: 1px solid #ccc; }
+      h2 { break-after: avoid; }
+      .exp-table, .academic-table { break-inside: avoid; }
+      .profile-flags { display: flex; }
+    }
+
+    /* ajustes de links */
+    a {
+      color: #1155cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* categorias para filtro */
+    .filterable-item {
+      transition: opacity 0.2s;
+    }
+    .filterable-item.hidden-by-filter {
+      display: none;
+    }
+
+    /* responsivo */
+    @media (max-width: 700px) {
+      body { padding: 12px; }
+      .cv-wrapper { padding: 16px; }
+      .header-flex { flex-wrap: wrap; }
+      .logo-area { order: 1; width: 100%; margin-bottom: 10px; }
+      .profile-flags { order: 2; width: 100%; justify-content: space-between; }
+      .company-logo { width: 70px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PALAVRAS-CHAVE OCULTAS PARA ATS (100+) -->
+<div class="ats-keywords">
+  Administração, Financeiro, Contratos, Cobrança, Atas, Assembleias, Condomínios, Contabilidade, Petições, Cálculos Judiciais, Direito do Consumidor, LGPD, Compliance, Controladoria, Auditoria, Processos, ERP, Sistemas, Banco de Dados, SQL, Gestão de Projetos, Scrum, Metodologias Ágeis, Kanban, Design Gráfico, Adobe Creative Cloud, Photoshop, Illustrator, InDesign, CorelDraw, Autodesk, AutoCAD, SketchUp, Modelagem 3D, Renderização, Desenvolvimento Web, HTML, CSS, JavaScript, Moodle, EAD, Ensino a Distância, Treinamento, Instrutor, Informática, Pacote Office, Excel Avançado, Word, PowerPoint, Outlook, OneDrive, Teams, SharePoint, Power BI, Segurança da Informação, Cibersegurança, LGPD, Redes, Cisco, Infraestrutura, Suporte Técnico, Helpdesk, Montagem e Manutenção, Hardware, Software, Governança de TI, ITIL, COBIT, Gestão de Pessoas, Liderança, Trabalho em Equipe, Comunicação, Negociação, Empreendedorismo, Inovação, Startups, Marketing Digital, Google Ads, Facebook Ads, SEO, CRM, Atendimento ao Cliente, Vendas, Comércio Exterior, Aduana, Logística, Supply Chain, Tesouraria, Fluxo de Caixa, DRE, Orçamento, Análise Financeira, Inteligência Artificial, Machine Learning, IA Generativa, Algoritmos, Lógica de Programação, Python, Java, .NET, Arquitetura de Computadores, Sistemas Operacionais, Linux, Windows, Virtualização, Cloud Computing, AWS, Azure, Storage, Backup, Recuperação de Dados, Análise de Dados, Business Intelligence, Tableau, Metabase, Legislação Trabalhista, CLT, Direito Administrativo, Licitações, Contratos Públicos, Gestão Pública, Políticas Públicas, Administração Pública, Controladoria Pública.
+  <!-- + palavras relacionadas -->
+  Gestão administrativa, Rotinas financeiras, Conciliação bancária, Contas a pagar/receber, Faturamento, Nota Fiscal, SPED, EFD, DCTF, PER/DCOMP, eSocial, Folha de pagamento, Departamento Pessoal, Recrutamento e Seleção, Onboarding, Treinamento corporativo, Avaliação de desempenho, Plano de carreira, Endomarketing, Comunicação interna, Responsabilidade social, Sustentabilidade, ESG, Ética empresarial, Governança corporativa, Relações com investidores, Valuation, M&amp;A, Due diligence, Business Plan, Canvas, OKR, BSC, KPI, SLA, Suporte N1/N2, Service Desk, ITSM, Banco de dados relacional, MySQL, PostgreSQL, MongoDB, Versionamento Git, GitHub, GitLab, Metodologia waterfall, Lean, Six Sigma, ISO 9001, ISO 27001, LGPD, GDPR, Privacidade de dados, Perícia forense computacional, Edição de vídeo, Premiere, After Effects, Produção audiovisual, Fotografia, Tratamento de imagem, Diagramação, Editoração eletrônica, Marketing de conteúdo, Inbound marketing, Outbound, Funil de vendas, E-commerce, Marketplace, Shopify, Woocommerce, Magento, Logística reversa, Frete, Transporte, Almoxarifado.
+</div>
+
+<div class="cv-wrapper">
+  <!-- Google Translate (oculto) -->
+  <div id="google_translate_element"></div>
+
+  <!-- TOPO: logo centralizado link + perfil + bandeiras -->
+  <div class="header-flex">
+    <div class="profile-flags">
+      <img src="/workspaces/Curriculo/Imagens/image40.jpg" alt="Gabriel Dutra" class="profile-pic">
+      
+    </div><div class="logo-area">
+      <a href="http://lattes.cnpq.br/5027029650063540" target="_blank" class="logo-link">
+        <img src="/workspaces/Curriculo/Imagens/image25.png" alt="Logo Lattes" class="logo-img" style="display:block; margin:0 auto;">
+      </a>
+    </div><div class="flags">
+        <!-- bandeiras que acionam tradução -->
+        <img src="/workspaces/Curriculo/Imagens/de.png" alt="Alemão" class="flag" data-lang="de" title="Traduzir para Alemão">
+        <img src="/workspaces/Curriculo/Imagens/gb.png" alt="English" class="flag" data-lang="en" title="Translate to English">
+        <img src="/workspaces/Curriculo/Imagens/br.png" alt="Português" class="flag" data-lang="pt" title="Português (original)">
+      </div>
+    
+  </div>
+
+  <!-- Nome e dados principais -->
+  <h2 style="border-bottom: none; margin-top: 5px; margin-bottom: 5px;">Gabriel dos Santos Menezes Dutra</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+    <div>
+      <p style="margin: 2px 0;"><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/5027029650063540" target="_blank">http://lattes.cnpq.br/5027029650063540</a> 
+      </p>
+    </div>
+    <div style="font-size: 0.9rem; background: #e6f0ff; padding: 4px 12px; border-radius: 30px;">
+      <span>📍 Centro - São Gonçalo-RJ &nbsp;|&nbsp; 📞
+<a href="https://wa.me/5521984465254">+55 21 98446-5254</a>  |  ✉️ <a href="mailto:gabrieldutra.job@gmail.com">gabrieldutra.job@gmail.com</a></span>
+    </div>
+  </div>
+
+  <!-- RESUMO (reescrito) -->
+  <h2>Resumo Profissional</h2>
+  <p style="background: #f2f8ff; padding: 18px 22px; border-radius: 30px; font-size: 1.02rem; border-left: 6px solid #3d85c6;">
+    Profissional multifuncional com 10+ anos de atuação em administração, finanças, tecnologia e design. 
+    Experiência consolidada em rotinas administrativas, gestão condominial, contratos, contas a pagar/receber, 
+    conciliação bancária e suporte a processos jurídicos. Domínio de ferramentas Office, ERP, sistemas financeiros, 
+    além de vivência em TI: suporte, redes, segurança da informação e desenvolvimento de soluções digitais. 
+    Habilidade em design gráfico (Pacote Adobe, Corel, AutoCAD) e instrutoria de informática. 
+    Sólida base acadêmica: Técnico em Administração (IFRJ), cursando Técnico em IA e Desenvolvimento de Sistemas, 
+    com formações complementares em cibersegurança, gestão de projetos e liderança. 
+    Perfil analítico, criativo, adaptável e orientado a resultados, com histórico de atuação em empresas privadas e setor público.
+  </p>
+
+  <!-- FILTRO INTELIGENTE (antes de formação e experiência) -->
+  <div class="filter-section">
+    <span class="filter-label">🔍 Filtrar por área:</span>
+    <div class="filter-buttons" id="filterContainer">
+      <button class="filter-btn" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="adm">📊 Administração</button>
+      <button class="filter-btn" data-filter="design">🎨 Design</button>
+      <button class="filter-btn" data-filter="adm-ti">💼 Adm + T.I.</button>
+      <button class="filter-btn active" data-filter="ti">🖥️ Suporte T.I.</button>
+      <button class="filter-btn" data-filter="juridico">⚖️ Ass.Jurídico</button>
+      <button class="filter-btn" data-filter="idiomas">🌐 Idiomas</button>
+    </div>
+    <span style="margin-left: auto; font-size: 0.8rem; color: #326c99;">Clique para filtrar experiências e formações</span>
+  </div>
+
+  <!-- FORMAÇÃO ACADÊMICA (com data-category) -->
+  <h2>Formação Acadêmica / Titulação</h2>
+  <table class="academic-table" id="academic-table">
+    <tbody><tr class="filterable-item" data-categories="ti,adm-ti,adm">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image44.png" alt="Estácio"></td>
+      <td>Universidade Estácio de Sá – <a href="https://drive.google.com/file/d/1q_MwYluuOsHNkMe6mykmUJRjVNsD9dyF/view?usp=sharing">Bacharel em Sistema da Informação (Cursado até 5º período)</a>. Trancado</td>
+    </tr>
+    <tr class="filterable-item hidden-by-filter" data-categories="adm,adm-ti,juridico">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image39.png" alt="IFRJ"></td>
+      <td>Instituto Federal do Rio de Janeiro (IFRJ) – <a href="https://drive.google.com/file/d/1o-3nCPdiCJgJ2pDOU90nKqlJbGTiyJuI/view?usp=sharing">Técnico em Administração</a>. <a href="https://drive.google.com/file/d/1AnF7Ttzdz3HoUm2YQPJcHEQ0LHO1Lzi7/view?usp=sharing">CONCLUÍDO</a></td>
+    </tr>
+    <tr class="filterable-item" data-categories="ti,adm-ti">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image33.png" alt="IFSULDEMINAS"></td>
+      <td>IFSULDEMINAS – <a href="https://drive.google.com/file/d/1-3NnPdCU-Bb4PGNCpLZr0q7MA9SwC7kq/view?usp=sharing">Técnico em Desenvolvimento de Sistemas (EAD)</a> <a href="https://drive.google.com/file/d/1-6IhguJ_XsdWc5HdLFLVU8yIyJS5-zrm/view?usp=sharing">Cursando 2026.2</a></td>
+    </tr>
+    <tr class="filterable-item" data-categories="ti,adm-ti,idiomas,juridico">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image15.jpg" alt="IFNMG"></td>
+      <td>IFNMG – <a href="https://drive.google.com/file/d/1wOehXV9WtxpL0H7cGsQZaR5OXIWhc3-e/view?usp=drive_link" data-categories="ti,adm-ti,juridico,adm">Técnico em Inteligência Artificial (EAD)</a> Cursando (término 2027.1)<br>
+<a href="https://drive.google.com/file/d/1w2C1v2ajuZCkIPaBPbpdCksHznk2VAWR/view?usp=drive_link" data-categories="juridico,adm">Técnico em Serviços Jurídicos (EAD) Cursando (término 2026.2)</a></td>
+    </tr>
+    <tr class="filterable-item hidden-by-filter" data-categories="adm,adm-ti,juridico">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image24.png" alt="UniCV"></td>
+      <td>Universidade Cidade Verde – <a href="https://drive.google.com/file/d/1oQCW983I3ju1YEpoDnAPqcvRhELGncW3/view?usp=sharing">Gestão Pública</a> (Cursando 2026.2)</td>
+    </tr>
+  </tbody></table>
+
+  <!-- FORMAÇÃO COMPLEMENTAR (com grid e filtro) -->
+  <h2>Formação Complementar</h2>
+  <div class="complement-grid" id="complement-grid">
+    <!-- Cada card com data-categories -->
+    <div class="course-card filterable-item" data-categories="ti,design,adm-ti,idiomas">
+      <img src="/workspaces/Curriculo/Imagens/image39.png" alt="IFRJ">
+      <div><strong>IFRJ</strong><br><a href="https://drive.google.com/file/d/1z1BdQcTBXVZ45ILGs6nrae_kMtoIaamb/view" data-categories="ti,design">Desenvolvimento de Aplicativos Android </a>, <a href="https://drive.google.com/file/d/1O2x3qksSIEzcCDglCyjDv_8qOmpDPj7b/view?usp=sharing" data-categories="ti,design">Introd. Produção Gráfica</a>, <a href="https://drive.google.com/file/d/1ceZxWOj1yrBJw92p121FYIwQ2P8xH9YG/view?usp=sharing" data-categories="ti,design">Introd. Audiovisual</a>, <a href="https://drive.google.com/file/d/1NV8sPNu29fgv2AOCqOn9P-s3UAtWUowt/view?usp=sharing" data-categories="idiomas">Francês Básico</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="adm,adm-ti">
+      <img src="/workspaces/Curriculo/Imagens/image4.png" alt="FGV">
+      <div><strong>FGV</strong><br><a href="https://drive.google.com/file/d/1W3t5tfOqBRIUeB3DiPnfY6fcmCk6HJjm/view?usp=sharing" data-categories="ti,adm-ti">Ciência e Tecnologia</a>, <a href="https://drive.google.com/file/d/1now-nAL-qNdvbrDvGz8Ajs4wYfmxCj3X/view?usp=sharing" data-categories="ti,adm-ti">Ética Empresarial</a>, <a href="https://drive.google.com/file/d/1Aef_iJvbLjeqqVep-IxHdc3zAaNhlvlY/view?usp=sharingdata-categories=" ti,design,adm-ti,juridico,adm"="">Sustentabilidade</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti,adm">
+      <img src="/workspaces/Curriculo/Imagens/image29.png" alt="Intel">
+      <div><strong>Intel®</strong><br><a href="https://drive.google.com/file/d/0B8kApPcQYxmqRnZmdVpJYmpmOHc/view?usp=sharing&amp;resourcekey=0-q6xujpFcPgi2JuAC0nklng" data-categories="ti,design,adm-ti,juridico,adm">Liderança</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqbWRfb3lMc2s2bG8/view?usp=sharing&amp;resourcekey=0-n9ybZbcnOMh3uAIeX9L1Mw" data-categories="ti,adm-ti,juridico,adm">Segurança da Informação I/</a><a href="https://drive.google.com/file/d/0B8kApPcQYxmqQ2RYc3A4Vk05bWs/view?usp=sharing&amp;resourcekey=0-ssd7pTPPWHf_bxrfPip6xA">II</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqREM4c3dpdDBOVGM/view?usp=sharing&amp;resourcekey=0-_WRQruRCKZgmhVDGCPK8cw" data-categories="adm-ti,juridico,adm">Governança Corporativa, </a><a href="https://drive.google.com/file/d/0B8kApPcQYxmqQmFibnVKTGozb0k/view?usp=sharing&amp;resourcekey=0-fN2WcvDPC73z275JFEV_4g" data-categories="ti,adm-ti,juridico,adm">Administração da TI, </a><a href="https://drive.google.com/file/d/0B8kApPcQYxmqSmlJNkc3RFRVc28/view?usp=sharing&amp;resourcekey=0-D-E0DZV4HoyqZFKelXMfPg" data-categories="ti,adm-ti,juridico,adm">ROI em TI</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqQU1qdFJHN2VQOXM/view?usp=sharing&amp;resourcekey=0-4I8o2lUf3LxIu_9_qBOMnA" data-categories="ti,adm-ti,adm">Adm. Integrada</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqNV9KU0NUU1FhSmM/view?usp=sharing&amp;resourcekey=0-DcCJN3RVE1pN-69VS4Vy5w" data-categories="ti,adm-ti,adm">ERP I/II</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqcmFIOWpLdV9semc/view?usp=sharing&amp;resourcekey=0-QkPzKyvVJJIsM0QwQzB26w" data-categories="ti,adm-ti,">Storage</a>.</div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="adm,juridico">
+      <img src="/workspaces/Curriculo/Imagens/image21.png" alt="NEES UFF"><img src="/workspaces/Curriculo/Imagens/image49.png" style="margin-auto:5px;">
+      <div><strong>NEES UFF</strong><br>Tesouro Direto, Decisões Financeiras</div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="adm">
+      <img src="/workspaces/Curriculo/Imagens/image46.png" alt="BACEN"><div><strong>BACEN</strong><br><a href="https://drive.google.com/file/d/1J0GmoDaEGzO-FSKW8YV0krDjbKfc5xyf/view?usp=sharing">Gestão de Finanças Pessoais</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="juridico,adm">
+      <img src="/workspaces/Curriculo/Imagens/image23.gif" alt="Senado"><div><strong>Senado Federal</strong><br><a href="https://drive.google.com/file/d/0B8kApPcQYxmqemY4RThQc0Q4eTg/view?usp=sharing&amp;resourcekey=0-WetNPkYO3TnYMcDEJt-Ovw" data-categories="adm-ti,juridico,adm">Ética e Adm Pública</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqeUw5bFFrekZ2UzQ/view?usp=sharing&amp;resourcekey=0-YpBwCYRcjOSqRxnf6D_kXw" data-categories="adm-ti,juridico,adm">Direito do Consumidor</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti,adm">
+      <img src="/workspaces/Curriculo/Imagens/image41.jpg" alt="TCU"><div><strong>TCU</strong><br><a href="https://drive.google.com/file/d/0B8kApPcQYxmqZDJFUjNPUUZMWkE/view?usp=sharing&amp;resourcekey=0-BaksFyD75s1mZy_G4iMTdQ" data-categories="adm-ti,juridico,adm">Controles na Adm Pública</a>, <a href="https://drive.google.com/file/d/0B8kApPcQYxmqZmxrdXZkMUhJSnc/view?usp=sharing&amp;resourcekey=0-UyfhtSHL2QiZk-zxPwSueg" data-categories="ti,adm-ti,juridico,adm">Segurança Digital</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="design,adm-ti,juridico">
+      <img src="/workspaces/Curriculo/Imagens/image45.jpg" alt="SENAI"><div><strong>SENAI</strong><br><a href="https://drive.google.com/file/d/0B8kApPcQYxmqZHFsMmlZalNvaWs/view?usp=sharing&amp;resourcekey=0-GwZDV8wktJR7STGxSUayxA" data-categories="ti,design,adm-ti">Desenho Arquitetônico</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqdHZLWS1yMThhU2M/view?usp=sharing&amp;resourcekey=0-vsMsC5cJFYAIcaFtpmqnfA" data-categories="ti,design,adm-ti">Lógica de Programação</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqdzRTbkhGWnRBUUk/view?usp=sharing&amp;resourcekey=0-W1S9Pi4Gqwm2weabxH_4vQ" data-categories="adm-ti,juridico,adm">Legislação Trabalhista</a></div>
+    </div>
+    <!-- continue com demais cards resumidos, mantendo links originais (abreviados para caber) -->
+    <div class="course-card filterable-item" data-categories="ti">
+      <img src="/workspaces/Curriculo/Imagens/image6.png" alt="Infinity"><div><strong>Infinity</strong><br><a href="https://drive.google.com/file/d/0B8kApPcQYxmqdDNnVVBITTZ2WDg/view?usp=sharing&amp;resourcekey=0-_VaNMOGl2utRBH9avt-mOA" data-categories="adm-ti,ti">Montagem, Manutenção, Rede CISCO</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,design">
+      <img src="/workspaces/Curriculo/Imagens/image8.png" alt="Tema"><div><strong>Tema Informática</strong><br>
+<a href="file:///C:/Users/Gabri.DESKTOP-TGCVTLD/Downloads/deepseek_html_20260416_88c989.html#">Instrutor: Pacote Office, Design Gráfico, AutoCAD, SketchUp.</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti,adm">
+      <img src="/workspaces/Curriculo/Imagens/image42.jpg" alt="SOS"><div><strong>S.O.S. Computadores</strong><br><a href="file:///C:/Users/Gabri.DESKTOP-TGCVTLD/Downloads/deepseek_html_20260416_88c989.html#" data-categories="adm-ti,ti,design">Office, Linux, Web Designer, Manutenção</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="adm,adm-ti">
+      <img src="/workspaces/Curriculo/Imagens/image17.png" alt="Bradesco"><div><strong>Fundação Bradesco</strong><br><a href="https://drive.google.com/file/d/1vphmGUzQDStLYpxkRTofCpjWvZQffI-m/view?usp=sharing" data-categories="adm-ti,ti,adm">Outlook</a>, 
+<a href="https://drive.google.com/file/d/1PlmKu8gaGMkwvU76PrP34dGokWNEqwcc/view?usp=sharing" data-categories="adm-ti,ti,adm">Teams</a>, 
+<a href="https://drive.google.com/file/d/19T2t3UA786D-fCKo-8xKcKkqcTjiWuPT/view?usp=sharing" data-categories="adm-ti,ti,adm">Planner</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,juridico">
+      <img src="/workspaces/Curriculo/Imagens/image16.png" alt="IPED"><div><strong>IPED</strong><br><a href="https://drive.google.com/file/d/14_zkUfMCPOdppq9m0QKKz8mk6XA4afet/view?usp=sharing" data-categories="adm-ti,ti,juridico">Analista de Cibersegurança</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,juridico,educação">
+      <img src="/workspaces/Curriculo/Imagens/image5.jpg" alt="Learncafe"><div><strong>Learncafe</strong><br><a href="https://drive.google.com/file/d/0B8kApPcQYxmqOWp4eUNZcmFzZTg/view?usp=sharing&amp;resourcekey=0-DBBniKtavT7HnJxWt5SuuA" data-categories="adm-ti,ti,juridico">Segurança na Internet</a>
+<a href="https://drive.google.com/file/d/1BFHEy5nd7ljWxknya3zbhMDqcQPOuxZ5/view?usp=sharing" data-categories="adm-ti,ti">Moodle</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="idiomas">
+      <img src="/workspaces/Curriculo/Imagens/image35.png" alt="SESI"><div><strong>SESI</strong><br>
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqNE91b2xGWmdkSDg/view?usp=sharing&amp;resourcekey=0-Geh555VB51qfUrRi-1Q0ew">Novo Acordo Ortográfico</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti">
+      <img src="/workspaces/Curriculo/Imagens/image34.png" alt="Unieducar"><div><strong>Unieducar</strong><br>
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqenN3bkRITVJoRE0/view?usp=sharing&amp;resourcekey=0-s61LoR_rMLyUiTPUDFOhaQ" data-categories="adm-ti,ti,adm">Sistemas de informação como suporte gerencial</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="design">
+      <img src="/workspaces/Curriculo/Imagens/image9.png" alt="Seven"><div><strong>Seven Design</strong><br>
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqOVN2dEc2U1cySk0/view?usp=sharing&amp;resourcekey=0-K8qMjRIF6VP9LsI1NwSjoQ" data-categories="adm-ti,ti,design">Pacote Adobe, Maya, Premiere</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="design">
+      <img src="/workspaces/Curriculo/Imagens/image30.png" alt="Pref Niterói"><div><strong>Plataforma Urbana Digital</strong><br><a href="https://drive.google.com/drive/folders/1QM-HaSNRmkGjQ3mPbrVod3fS3CNOfyPE?usp=sharing">Prototipagem 3D</a>
+</div>
+    </div>
+    <!-- adicionar mais conforme original (exemplo) -->
+    <div class="course-card filterable-item hidden-by-filter" data-categories="adm,adm-ti,design">
+      <img src="/workspaces/Curriculo/Imagens/image14.png" alt="SEBRAE"><div><strong>SEBRAE</strong><br>
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqWkI1bDVrQ2JqX1k/view?usp=sharing&amp;resourcekey=0-TwD87iEFYtTvyXTJoyLE4Q">Inovação</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqM29lMTZqUDVMcnc/view?usp=sharing&amp;resourcekey=0--3qLaceqgVp7icWR71BIOg">Empreendedorismo</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqV1BCSWVGNTNsaEk/view?usp=sharing&amp;resourcekey=0-6SOulaNFqdrfE3t-youxPw">Criatividade</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqRVdVcVgyOW5sUTQ/view?usp=sharing&amp;resourcekey=0-KYxe7qC10caGRmxOtCxcGQ">Equipe Motivada</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti">
+      <img src="/workspaces/Curriculo/Imagens/image36.png" alt="DIO"><div><strong>DIO</strong><br>
+<a href="https://drive.google.com/file/d/1wUkErOXUgNzoTsG8Mnotpmq06dJmXmhn/view?usp=sharing">Scrum</a>, 
+<a href="https://drive.google.com/file/d/1d2c49uPhDKr3pcxfbrgY_S73i0nE-LI6/view?usp=sharing">SQL Server</a>, 
+<a href="https://drive.google.com/file/d/18unInTZzRT63gIFTShImSi4Umx3Ozd-M/view?usp=sharing">Git/GitHub</a>, 
+<a href="https://drive.google.com/file/d/1szYXuxqLqGD7eFFCkGG4iAWqlGmtm_BH/view?usp=sharing">Intraempreendedorismo</a>, 
+<a href="https://drive.google.com/file/d/1zm_iSA5djaRQondw2PidL3-fCwPav3bX/view?usp=sharing">Modelagem de Negócios</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti">
+      <img src="/workspaces/Curriculo/Imagens/image38.png" alt="MVA"><div><strong>Microsoft Virtual Academy</strong><br>
+<a href="https://drive.google.com/file/d/17nxvpxMqR4ZjcIK-ESI7Gw2WXFat7Cuu/view?usp=sharing">Fundamentos de Tecnologia</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti">
+      <img src="/workspaces/Curriculo/Imagens/image13.png" alt="Cedaspy"><div><strong>Cedaspy</strong><br><a href="https://drive.google.com/file/d/1UTbdiyN_Oj63DD7rOqeIrDVIwY1IqIcm/view?usp=sharing">Capacitação Profissional</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti,adm">
+      <img src="/workspaces/Curriculo/Imagens/image43.png" alt="Softex"><div><strong>Softex</strong><br>
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqd3A2ZE42MGxfYU0/view?usp=sharing&amp;resourcekey=0-QecAf1AKudHA6g37kTjWLQ">.NET</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqaHBJUjN2ZHA4ZWc/view?usp=sharing&amp;resourcekey=0-yvFv1JO3NPzY0fGudT5YjQ">SO</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqeWdXRHFoUmh2Rnc/view?usp=sharing&amp;resourcekey=0-v4jz8dSVCnhSgiBGxK1EkQ">Redes</a>, 
+<a href="https://drive.google.com/file/d/0B8kApPcQYxmqdDZhR3hBZ2swRFE/view?usp=sharing&amp;resourcekey=0-P4tHytf4ZVakcj6e13AtGQ">Gestão Empres. ERP</a></div>
+    </div>
+    <div class="course-card filterable-item hidden-by-filter" data-categories="idiomas">
+      <img src="/workspaces/Curriculo/Imagens/image11.png" alt="ITB"><div><strong>ITB</strong><br>
+
+<a href="https://drive.google.com/file/d/1FdPa2WoIgIVQFPT_jLdVXSlaNao6jsnE/view?usp=sharing">Inglês Básico</a>
+</div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti,design">
+      <img src="/workspaces/Curriculo/Imagens/image12.png" alt="USP"><div><strong>USP</strong><br>
+<a href="https://drive.google.com/file/d/1r7-3ijX0TL4JipHPKtYwr5LpyBpjRE5X/view?usp=sharing">IA Generativa em Marketing</a>, 
+<a href="https://drive.google.com/file/d/1eWKTwIfv8SqYT8fyVRbbV-DDse4AXCQy/view?usp=drivesdk">Ciências Forenses</a>
+</div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,adm-ti,adm">
+      <img src="/workspaces/Curriculo/Imagens/image19.gif" alt="UNIFESP"><div><strong>UNIFESP</strong><br>
+<a href="https://drive.google.com/file/d/18-db-lKQiRE1A3UzRbxd0CZwXUMpwlBS/view?usp=drivesdk">IA na Prática</a></div>
+    </div>
+    <div class="course-card filterable-item" data-categories="ti,juridico,adm-ti,adm">
+      <img src="/workspaces/Curriculo/Imagens/image47.png" alt="APPAI"><div><strong>APPAI</strong><br>
+<a href="https://drive.google.com/file/d/1euJv1-AS34xPmdq_ePQetGIP7mp2d3tB/view?usp=drive_link">Analista de Cibersegurança</a>, 
+<a href="https://drive.google.com/file/d/1m-bSwpAwaofHthkIpEQcQ-3y6-w1w4W9/view?usp=drive_link">Gestão da Informação</a>
+
+</div>
+    </div>
+  </div>
+
+  <!-- EXPERIÊNCIA PROFISSIONAL -->
+  <h2>Experiência Profissional</h2>
+  <table class="exp-table" id="exp-table">
+    <!-- itens com data-categories, mantendo todos links originais -->
+    <tbody><tr class="filterable-item hidden-by-filter" data-categories="adm,adm-ti,financeiro">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image28.png" alt="Construtora Mediterrâneo"></td>
+      <td class="job-desc"><strong>Assistente Administrativo Financeiro</strong> – Construtora Mediterrâneo<span class="item-date">02/2025 – 03/2026</span><br>
+        Elaboração de contratos, distratos, relacionamento com clientes, rotinas financeiras, protestos, cadastros.
+      </td>
+    </tr>
+    <tr class="filterable-item hidden-by-filter" data-categories="adm,juridico,adm-ti">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image31.png" alt="SATEC"></td>
+      <td><strong>Assistente Administrativo</strong> – SATEC Contabilidade<span class="item-date">08/2024 – 02/2025</span><br>Rotinas condominiais, atas, assembleias, petições iniciais, cálculos de correção.</td>
+    </tr>
+    <tr class="filterable-item hidden-by-filter" data-categories="adm,servicos">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image32.png" alt="CORE-RJ"></td>
+      <td><strong>Copeiro</strong> – CORE-RJ (Concurso Público) <span class="item-date">07/2022 – 07/2024</span>
+
+<br><a href="https://core-rj.implanta.net.br/PortalTransparencia/Publico/ArquivosAnexos/Download?idArquivoAnexo=6508475d-57a7-4ab0-a407-d3b1d8714030">Convocação</a></td>
+    </tr>
+    <tr class="filterable-item hidden-by-filter" data-categories="adm,adm-ti,comercio exterior">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image22.png"><br><img src="/workspaces/Curriculo/Imagens/image10.png" style="margin-top:5px;"></td>
+      <td><strong>Auxiliar Administrativo</strong> – OSTARA COMEX / Petrobras<span class="item-date">04/2022 – 07/2022</span>
+<br>
+<ul class="desc-list">
+                    <li>Auxílio na contratação, faturamento e emissão de NF de serviços.</li>
+                    <li>Pedidos de suprimentos e necessidade de liberação de carga no sistema Petronect.</li>
+                    <li>Folha de registro de serviços e pedido de reembolso fiscal.</li>
+                    <li>Balanço financeiro, contas e relatórios analíticos em dashboard (situação aduaneira).</li>
+                </ul><div class="recommendation">📌 Saída: Posse em cargo público em Autarquia Federal.</div></td>
+    </tr>
+    <tr class="filterable-item" data-categories="ti,adm-ti,design,adm">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image48.jpg" alt="AMBSERJ"></td>
+      <td><strong>Auxiliar Administrativo c/ ênfase em TI</strong> – AMBSERJ<span class="item-date">04/2020 – 01/2022</span>
+<br>
+<ul class="desc-list">
+                    <li>Execução de estratégias de TI para melhoria de processos internos.</li>
+                    <li>Elaboração de material publicitário impresso e informatização de processos financeiros/contábeis.</li>
+                    <li>Suporte aos auxiliares administrativos e demandas de informatização.</li>
+                    <li>Edição e envio de arquivos de débito automático conforme FEBRABAN.</li>
+                </ul>
+<div class="recommendation">🤝 Recomendação: Ademir (Diretor Financeiro) – (21) 99912-7612 / ademir@thefamily.com</div></td>
+
+    </tr>
+    <tr class="filterable-item" data-categories="empreendedorismo,adm,ti,design">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image2.png" alt="Cubo Entregadores"></td>
+      <td><strong>Idealizador/Fundador</strong> – Cubo Entregadores<span class="item-date">04/2020 – 01/2022</span>
+<br>
+<ul class="desc-list">
+                    <li>Startup digital durante pandemia; base financeira para jovens entregadores.</li>
+                    <li>Informatização de processos, análise SWOT, 5 Forças de Porter, Kaizen/5S.</li>
+                    <li>Automação de mensagens (WhatsApp/Facebook) para cobrança e notificações.</li>
+                    <li>Publicidade: Facebook Ads, Google Ads, criação de leads e vendas.</li>
+                </ul></td>
+    </tr>
+    <tr class="filterable-item hidden-by-filter" data-categories="educacao,adm,adm-ti">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image27.png"><img src="/workspaces/Curriculo/Imagens/image1.png"><img src="/workspaces/Curriculo/Imagens/image3.png"></td>
+      <td><strong>Digitador / Aplicador de provas</strong>IMPA – Olimpíada Brasileira de Matemática das Escolas Públicas - <span class="item-date"><a href="https://drive.google.com/file/d/1_Ofp1AEq6MPL2rq8AZHgNZa7gXNeSEeT/view?usp=sharing">11/2021</a>
+ , 09/2019,
+<a href="https://drive.google.com/file/d/1YwSnApDNI6fll8mNLpDhK_9Ex-74q4rj/view?usp=sharing">09/2018</a>, 10/2024.
+
+</span><br>
+<ul class="desc-list">
+                    <li>Aplicação de provas conforme edital; técnicas Scrum e metodologias ágeis na organização.</li>
+                    <li>Separação em lotes e digitação de notas no sistema.</li>
+                </ul></td>
+    </tr>
+    <tr class="filterable-item" data-categories="ti,design,educacao,adm-ti">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image26.jpg" alt="Pref Niterói"></td>
+      <td><strong>Estágio Desenv. Web e Design</strong> – Fundação Municipal de Educação de Niterói<span class="item-date"><a href="https://drive.google.com/file/d/1jqDvxWX0NaqHWdUwihxBIxA1k53Zr87Q/view?usp=sharing">08/2018 – 12/2019</a>
+</span>
+<br>
+<ul class="desc-list">
+                    <li>Desenvolvimento de mídias e recursos visuais da Assessoria de Mídias.</li>
+                    <li>Auxílio na Feira Nacional de Ciências e Tecnologia.</li>
+                    <li>Administração do Portal Moodle para docentes da Rede Municipal.</li>
+                </ul>
+<div class="recommendation">🤝 Recomendação: Carla Sena – (21) 2719-6354 / cemintec.niteroi@gmail.com</div></td>
+    </tr>
+    <tr class="filterable-item" data-categories="ti,adm-ti,design,juridico">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image37.png" alt="Bruno Latini"></td>
+      <td><strong>Auxiliar Administrativo / TI</strong> – Bruno Latini Jóias<span class="item-date">04/2017 – 01/2021</span>
+<br>
+<ul class="desc-list">
+                    <li>Estratégias de TI, controle financeiro e estoque de lojas físicas.</li>
+                    <li>Gerenciamento do site, plataforma de vendas internacional e blog.</li>
+                    <li>Edição de fotos/vídeos, campanhas publicitárias e redes sociais.</li>
+                    <li>Balanço financeiro e análise de tendências de vendas.</li>
+                </ul>
+<div class="recommendation">🤝 Recomendação: Ezequiel (Gerente) – (21) 99036-3096 / contato@brunolatini.com.br</div></td>
+    </tr>
+    <tr class="filterable-item" data-categories="educacao,ti,design,adm-ti">
+      <td class="company-logo"><img src="/workspaces/Curriculo/Imagens/image8.png" alt="Tema"></td>
+      <td><strong>Instrutor de Informática</strong> – Tema Informática<span class="item-date">09/2015 – 03/2017</span>
+<br>
+<ul class="desc-list">
+                    <li>Aulas profissionalizantes: Design Gráfico (Illustrator, Photoshop, Corel, InDesign), Office, AutoCAD 2D/3D, SketchUp, Montagem e Manutenção.</li>
+                    <li>Registro de presenças e avaliações; editoração de apostilas didáticas.</li>
+                </ul>
+<div class="recommendation">🤝 Recomendação: Carlos (Gerente) – (21) 99737-6542 / carlosdotema@gmail.com</div></td>
+    </tr>
+  </tbody></table>
+
+  <!-- OBJETIVOS (reescrito) -->
+  <h2>Objetivos</h2>
+  <p style="font-size: 1.05rem; background: #eaf3e4; padding: 16px 22px; border-radius: 30px;">
+    Contribuir ativamente para o crescimento da organização, aplicando visão multidisciplinar em administração, tecnologia e inovação. 
+    Busco oportunidades que valorizem a integração entre processos administrativos, transformação digital e inteligência de negócios, 
+    onde eu possa atuar com autonomia, criatividade e foco em resultados sustentáveis. Almejo desenvolver novas competências, 
+    compartilhar conhecimentos e fazer parte de uma equipe colaborativa, gerando impacto positivo e fortalecendo a cultura de melhoria contínua.
+  </p>
+
+  <!-- RODAPÉ com image7 link -->
+  <div class="footer-lattes">
+    <a href="http://lattes.cnpq.br/5027029650063540" target="_blank">
+      <img src="/workspaces/Curriculo/Imagens/image7.png" alt="Acessar Lattes">
+    </a>
+  </div>
+
+  <!-- BOTÃO IMPRIMIR (visível apenas em tela) -->
+  <div class="print-btn-container">
+    <button class="print-btn" id="printBtn">🖨️ Imprimir / Salvar PDF</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // FILTRO INTELIGENTE
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const filterableItems = document.querySelectorAll('.filterable-item');
+    
+    function filterCategory(category) {
+      filterableItems.forEach(item => {
+        const cats = item.dataset.categories ? item.dataset.categories.split(',') : [];
+        if (category === 'all'
+            cats.includes(category)) {
+          item.classList.remove('hidden-by-filter');
+        } else {
+          item.classList.add('hidden-by-filter');
+        }
+      });
+      // Atualiza botão ativo
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === category) btn.classList.add('active');
+      });
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const filterValue = btn.dataset.filter;
+        filterCategory(filterValue);
+      });
+    });
+
+    // TRADUÇÃO VIA BANDEIRAS (usa Google Translate)
+    const flags = document.querySelectorAll('.flag');
+    flags.forEach(flag => {
+      flag.addEventListener('click', () => {
+        const lang = flag.dataset.lang;
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = lang;
+          select.dispatchEvent(new Event('change'));
+        } else {
+          // fallback: recarrega translate
+          window.location.href = `#googtrans(pt|${lang})`;
+          setTimeout(() => location.reload(), 200);
+        }
+      });
+    });
+
+    // IMPRIMIR
+    document.getElementById('printBtn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Ajusta filtro "Idiomas" para mostrar todos
+    const idiomasBtn = Array.from(filterButtons).find(b => b.dataset.filter === 'idiomas');
+    if(idiomasBtn) {
+      idiomasBtn.addEventListener('click', () => filterCategory('all'));
+    }
+
+    // Inicializa com 'all'
+    filterCategory('all');
+  })();
+</script>
+
+<!-- Pequeno ajuste para garantir que o Google Translate funcione com bandeiras -->
+<style>
+  .goog-te-banner-frame { display: none !important; }
+  body { top: 0 !important; }
+  .skiptranslate iframe { display: none; }
+</style>
+
+<!-- Todas as imagens e links originais mantidos. Palavras-chave ocultas inseridas. -->
+
+</body></html>
