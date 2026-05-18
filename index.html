@@ -16,8 +16,7 @@
   </script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <style>
-   /* ===== RESET & BASE ===== */
-/* ===== RESET & BASE (ATS-FRIENDLY + CRIATIVO) ===== */
+    /* ===== RESET & BASE (ATS-FRIENDLY + CRIATIVO) ===== */
     * {
       margin: 0;
       padding: 0;
@@ -337,6 +336,34 @@
       color: white;
     }
 
+    @media print {
+      body { background: white; padding: 0.2in; }
+      .cv-wrapper { box-shadow: none; border: none; padding: 0; }
+      .filter-section, .flags, .print-btn-container, #google_translate_element { display: none !important; }
+      .footer-lattes { border-top: 1px solid #ccc; }
+      h2 { break-after: avoid; }
+      .exp-table, .academic-table { break-inside: avoid; }
+      .profile-flags { display: flex; }
+    }
+
+    /* ajustes de links */
+    a {
+      color: #1155cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* categorias para filtro */
+    .filterable-item {
+      transition: opacity 0.2s;
+    }
+    .filterable-item.hidden-by-filter {
+      display: none;
+    }
+
     /* responsivo */
     @media (max-width: 700px) {
       body { padding: 12px; }
@@ -363,31 +390,34 @@
 
   <!-- TOPO: logo centralizado link + perfil + bandeiras -->
   <div class="header-flex">
-  <div class="profile-flags">
-    <img src="Imagens/image40.jpg" alt="Gabriel Dutra" class="profile-pic">
-    <div class="flags">
-      <img src="Imagens/de.png" alt="Alemão" class="flag" data-lang="de" title="Deutsche">
-      <img src="Imagens/gb.png" alt="English" class="flag" data-lang="en" title="English">
-      <img src="Imagens/br.png" alt="Português" class="flag" data-lang="pt" title="Português">
-    </div>
+    <div class="profile-flags">
+      <img src="Imagens/image40.jpg" alt="Gabriel Dutra" class="profile-pic">
+      
+    </div><div class="logo-area">
+      <a href="http://lattes.cnpq.br/5027029650063540" target="_blank" class="logo-link">
+        <img src="Imagens/image25.png" alt="Logo Lattes" class="logo-img" style="display:block; margin:0 auto;">
+      </a>
+    </div><div class="flags">
+        <!-- bandeiras que acionam tradução -->
+        <img src="Imagens/de.png" alt="Alemão" class="flag" data-lang="de" title="Deutsche">
+        <img src="Imagens/gb.png" alt="English" class="flag" data-lang="en" title="English">
+        <img src="Imagens/br.png" alt="Português" class="flag" data-lang="pt" title="Traduzir">
+      </div>
+    
   </div>
-  <div class="logo-area">
-    <a href="http://lattes.cnpq.br/5027029650063540" target="_blank" class="logo-link">
-      <img src="Imagens/image25.png" alt="Logo Lattes" class="logo-img">
-    </a>
-  </div>
-</div>
 
   <!-- Nome e dados principais -->
   <h2 style="border-bottom: none; margin-top: 5px; margin-bottom: 5px;">Gabriel Dutra</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; text-align: center; margin: 8px 0;">
-  <div>
-    <strong>Lattes:</strong> <a href="http://lattes.cnpq.br/5027029650063540" target="_blank">http://lattes.cnpq.br/5027029650063540</a>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+    <div>
+      <p style="margin: 2px 0;"><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/5027029650063540" target="_blank">http://lattes.cnpq.br/5027029650063540</a> 
+      </p>
+    </div>
+    <div style="font-size: 0.9rem; background: #e6f0ff; padding: 4px 12px; border-radius: 30px;">
+      <span>📍 Centro - São Gonçalo-RJ &nbsp;|&nbsp; 📞
+<a href="https://wa.me/5521984465254">+55 21 98446-5254</a>  |  ✉️ <a href="mailto:gabrieldutra.job@gmail.com">gabrieldutra.job@gmail.com</a></span>
+    </div>
   </div>
-  <div style="background: #e6f0ff; padding: 4px 12px; border-radius: 30px; font-size: 0.85rem;">
-    📍 Centro - São Gonçalo-RJ | 📞 <a href="https://wa.me/5521984465254">+55 21 98446-5254</a> | ✉️ <a href="mailto:gabrieldutra.job@gmail.com">gabrieldutra.job@gmail.com</a>
-  </div>
-</div>
 
   <!-- RESUMO (reescrito) -->
   <h2>Resumo Profissional</h2>
@@ -751,13 +781,7 @@
 
     // Inicializa com 'all'
     filterCategory('all');
-if (window.innerWidth < 700) {
-  document.querySelectorAll('.filterable-item').forEach(el => {
-    if (!el.classList.contains('hidden-by-filter')) el.style.display = '';
-  });
-  });
-}
-
+  })();
 </script>
 
 <!-- Pequeno ajuste para garantir que o Google Translate funcione com bandeiras -->
