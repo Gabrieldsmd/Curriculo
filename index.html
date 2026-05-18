@@ -16,336 +16,216 @@
   </script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <style>
-    /* ===== RESET & BASE (ATS-FRIENDLY + CRIATIVO) ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+   /* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      background: #f4f7fc;
-      font-family: 'Segoe UI', 'Century Gothic', 'Roboto', sans-serif;
-      color: #1e2b3a;
-      line-height: 1.5;
-      padding: 28px 24px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-    }
+body {
+  background: #f4f7fc;
+  font-family: 'Segoe UI', 'Century Gothic', 'Roboto', sans-serif;
+  color: #1e2b3a;
+  line-height: 1.5;
+  padding: 16px 12px;
+  margin: 0;
+}
 
-    /* container principal */
-    .cv-wrapper {
-      background: #ffffff;
-      border-radius: 28px;
-      box-shadow: 0 12px 30px rgba(0, 40, 80, 0.08);
-      padding: 10px 32px 24px;
-      transition: all 0.2s;
-      border: 1px solid #d9e2ef;
-    }
+.cv-wrapper {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(0, 40, 80, 0.08);
+  padding: 20px 16px 24px;
+  border: 1px solid #d9e2ef;
+}
 
-    /* cabeçalho com foto e bandeiras */
-    .header-flex {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
+/* cabeçalho responsivo */
+.header-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
 
-    .logo-area {
-      flex: 2;
-      text-align: center;
-    }
+.logo-area {
+  order: 2;
+  text-align: center;
+}
 
-    .logo-link {
-      display: inline-block;
-    }
+.logo-img {
+  max-width: 100%;
+  max-height: 60px;
+}
 
-    .logo-img {
-      max-width: 100%;
-      height: auto;
-      max-height: 70px;
-      object-fit: contain;
-      transition: opacity 0.2s;
-    }
+.profile-flags {
+  order: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-    .profile-flags {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 40px;
-    }
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3d85c6;
+}
 
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #3d85c6;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
+.flags {
+  display: flex;
+  gap: 8px;
+  background: rgba(255,255,255,0.8);
+  padding: 4px 10px;
+  border-radius: 40px;
+  border: 1px solid #cbd6e4;
+}
 
-    .flags {
-      display: flex;
-      gap: 8px;
-      background: rgba(255,255,255,0.7);
-      padding: 4px 8px;
-      border-radius: 40px;
-      backdrop-filter: blur(4px);
-      border: 1px solid #cbd6e4;
-    }
+.flag {
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    .flag {
-      width: 30px;
-      height: 22px;
-      object-fit: cover;
-      border-radius: 4px;
-      cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      transition: transform 0.1s;
-      border: 1px solid #ffffff;
-    }
+/* filtro adaptado para toque */
+.filter-section {
+  background: #eef3fa;
+  padding: 12px 16px;
+  border-radius: 32px;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
 
-    .flag:hover {
-      transform: scale(1.08);
-      border-color: #326c99;
-    }
+.filter-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+}
 
-    /* ocultar widget padrão do google, usaremos flags custom */
-    #google_translate_element {
-      display: none;
-    }
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
 
-    /* FILTRO INTELIGENTE */
-    .filter-section {
-      background: #eef3fa;
-      padding: 16px 18px;
-      border-radius: 48px;
-      margin: 24px 0 18px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px 18px;
-      border: 1px solid #bdd1e8;
-    }
+.filter-btn {
+  background: white;
+  border: 1.5px solid #3d85c6;
+  color: #1e3a5f;
+  padding: 10px 16px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-height: 44px; /* toque */
+}
 
-    .filter-label {
-      font-weight: 700;
-      color: #1e3a5f;
-      letter-spacing: 0.3px;
-      font-size: 1rem;
-    }
+/* tabelas - rolagem horizontal em smartphone */
+.exp-table, .academic-table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
 
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+.exp-table td, .academic-table td {
+  white-space: normal;
+  padding: 12px 12px;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e2eaf2;
+}
 
-    .filter-btn {
-      background: white;
-      border: 1.5px solid #3d85c6;
-      color: #1e3a5f;
-      padding: 8px 16px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.15s;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    }
+.company-logo {
+  width: auto;
+  text-align: center;
+  background: #fafcff;
+  padding: 8px 0;
+}
 
-    .filter-btn:hover {
-      background: #d9e9ff;
-    }
+/* cards de formação */
+.complement-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
 
-    .filter-btn.active {
-      background: #326c99;
-      border-color: #326c99;
-      color: white;
-      box-shadow: 0 4px 8px rgba(50,108,153,0.2);
-    }
+.course-card {
+  background: #f9fcff;
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    /* ESTILOS DE SEÇÃO (ATS mantém headings semânticos) */
-    h2 {
-      font-family: 'Century Gothic', 'Segoe UI', sans-serif;
-      color: #326c99;
-      border-bottom: 2px solid #a6c0d9;
-      padding-bottom: 6px;
-      margin: 28px 0 18px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-      font-size: 1.6rem;
-    }
+.course-card img {
+  width: 50px;
+  max-height: 40px;
+}
 
-    h3 {
-      color: #1e3a5f;
-      margin: 12px 0 6px;
-      font-weight: 600;
-    }
+/* dados pessoais */
+.personal-table td {
+  display: block;
+  padding: 4px 0;
+}
 
-    /* tabelas ATS-friendly + moderno */
-    .exp-table, .academic-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-    }
+/* botão imprimir */
+.print-btn-container {
+  text-align: center;
+  margin-top: 24px;
+}
 
-    .exp-table td, .academic-table td {
-      padding: 14px 16px;
-      vertical-align: top;
-      border-bottom: 1px solid #e2eaf2;
-    }
+.print-btn {
+  background: none;
+  border: 1.5px solid #326c99;
+  color: #326c99;
+  padding: 12px 28px;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: white;
+  width: 100%;
+  max-width: 280px;
+}
 
-    .exp-table tr:last-child td, .academic-table tr:last-child td {
-      border-bottom: none;
-    }
+/* ajustes gerais */
+h2 {
+  font-size: 1.5rem;
+  margin: 24px 0 12px;
+}
 
-    .company-logo {
-      width: 100px;
-      text-align: center;
-      background: #fafcff;
-    }
+.item-date {
+  display: inline-block;
+  margin-top: 6px;
+}
 
-    .company-logo img {
-      max-width: 100px;
-      max-height: 70px;
-      object-fit: contain;
-    }
-
-    .job-desc {
-      line-height: 1.55;
-    }
-
-    .job-desc ul {
-      padding-left: 22px;
-      margin: 6px 0;
-    }
-
-    .job-desc li {
-      margin-bottom: 6px;
-    }
-
-    /* cartões de formação complementar */
-    .complement-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 16px;
-      margin: 20px 0;
-    }
-
-    .course-card {
-      background: #f9fcff;
-      border-radius: 24px;
-      padding: 14px 16px;
-      border: 1px solid #d2e2f5;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      transition: all 0.1s;
-    }
-
-    .course-card img {
-      width: 70px;
-      height: auto;
-      max-height: 50px;
-      object-fit: contain;
-    }
-
-    /* dados pessoais */
-    .personal-table {
-      width: auto;
-      border-collapse: collapse;
-      margin-bottom: 10px;
-    }
-
-    .personal-table td {
-      padding: 6px 12px 6px 0;
-    }
-
-    /* keywords ocultas (ATS) */
-    .ats-keywords {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      opacity: 0.01;
-      pointer-events: none;
-      color: #ffffff;
-    }
-
-    /* footer com image7 */
-    .footer-lattes {
-      margin-top: 36px;
-      text-align: right;
-      border-top: 1px dashed #b8cee7;
-      padding-top: 16px;
-    }
-
-    .footer-lattes img {
-      height: 28px;
-      width: auto;
-    }
-
-    /* recomendação */
-    .recommendation {
-        background: #f9fbfd;
-        padding: 10px 15px;
-        border-radius: 14px;
-        margin-top: 12px;
-        font-size: 0.9rem;
-        border-left: 4px solid #a3b8d9;
-     }
-
-        .item-date {
-            font-size: 0.9rem;
-            color: #5e6f82;
-            font-weight: 500;
-            background: #ecf2f9;
-            padding: 2px 10px;
-            border-radius: 20px;
-        }
-
-    /* botão imprimir */
-    .print-btn-container {
-      text-align: right;
-      margin-top: 20px;
-    }
-
-    .print-btn {
-      background: none;
-      border: 1.5px solid #326c99;
-      color: #326c99;
-      padding: 8px 24px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: 0.15s;
-      background: white;
-    }
-
-    .print-btn:hover {
-      background: #326c99;
-      color: white;
-    }
-
-    @media print {
-      body { background: white; padding: 0.2in; }
-      .cv-wrapper { box-shadow: none; border: none; padding: 0; }
-      .filter-section, .flags, .print-btn-container, #google_translate_element { display: none !important; }
-      .footer-lattes { border-top: 1px solid #ccc; }
-      h2 { break-after: avoid; }
-      .exp-table, .academic-table { break-inside: avoid; }
-      .profile-flags { display: flex; }
-    }
-
+/* impressão */
+@media print {
+  body { background: white; padding: 0.2in; }
+  .cv-wrapper { box-shadow: none; border: none; padding: 0; }
+  .filter-section, .flags, .print-btn-container, #google_translate_element { display: none !important; }
+  .exp-table td, .academic-table td { display: table-cell; white-space: normal; }
+  .complement-grid { grid-template-columns: repeat(2,1fr); }
+}
     /* ajustes de links */
     a {
       color: #1155cc;
@@ -390,34 +270,31 @@
 
   <!-- TOPO: logo centralizado link + perfil + bandeiras -->
   <div class="header-flex">
-    <div class="profile-flags">
-      <img src="Imagens/image40.jpg" alt="Gabriel Dutra" class="profile-pic">
-      
-    </div><div class="logo-area">
-      <a href="http://lattes.cnpq.br/5027029650063540" target="_blank" class="logo-link">
-        <img src="Imagens/image25.png" alt="Logo Lattes" class="logo-img" style="display:block; margin:0 auto;">
-      </a>
-    </div><div class="flags">
-        <!-- bandeiras que acionam tradução -->
-        <img src="Imagens/de.png" alt="Alemão" class="flag" data-lang="de" title="Deutsche">
-        <img src="Imagens/gb.png" alt="English" class="flag" data-lang="en" title="English">
-        <img src="Imagens/br.png" alt="Português" class="flag" data-lang="pt" title="Traduzir">
-      </div>
-    
+  <div class="profile-flags">
+    <img src="Imagens/image40.jpg" alt="Gabriel Dutra" class="profile-pic">
+    <div class="flags">
+      <img src="Imagens/de.png" alt="Alemão" class="flag" data-lang="de" title="Deutsche">
+      <img src="Imagens/gb.png" alt="English" class="flag" data-lang="en" title="English">
+      <img src="Imagens/br.png" alt="Português" class="flag" data-lang="pt" title="Português">
+    </div>
   </div>
+  <div class="logo-area">
+    <a href="http://lattes.cnpq.br/5027029650063540" target="_blank" class="logo-link">
+      <img src="Imagens/image25.png" alt="Logo Lattes" class="logo-img">
+    </a>
+  </div>
+</div>
 
   <!-- Nome e dados principais -->
   <h2 style="border-bottom: none; margin-top: 5px; margin-bottom: 5px;">Gabriel Dutra</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
-    <div>
-      <p style="margin: 2px 0;"><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/5027029650063540" target="_blank">http://lattes.cnpq.br/5027029650063540</a> 
-      </p>
-    </div>
-    <div style="font-size: 0.9rem; background: #e6f0ff; padding: 4px 12px; border-radius: 30px;">
-      <span>📍 Centro - São Gonçalo-RJ &nbsp;|&nbsp; 📞
-<a href="https://wa.me/5521984465254">+55 21 98446-5254</a>  |  ✉️ <a href="mailto:gabrieldutra.job@gmail.com">gabrieldutra.job@gmail.com</a></span>
-    </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; text-align: center; margin: 8px 0;">
+  <div>
+    <strong>Lattes:</strong> <a href="http://lattes.cnpq.br/5027029650063540" target="_blank">http://lattes.cnpq.br/5027029650063540</a>
   </div>
+  <div style="background: #e6f0ff; padding: 4px 12px; border-radius: 30px; font-size: 0.85rem;">
+    📍 Centro - São Gonçalo-RJ | 📞 <a href="https://wa.me/5521984465254">+55 21 98446-5254</a> | ✉️ <a href="mailto:gabrieldutra.job@gmail.com">gabrieldutra.job@gmail.com</a>
+  </div>
+</div>
 
   <!-- RESUMO (reescrito) -->
   <h2>Resumo Profissional</h2>
@@ -781,6 +658,11 @@
 
     // Inicializa com 'all'
     filterCategory('all');
+if (window.innerWidth < 700) {
+  document.querySelectorAll('.filterable-item').forEach(el => {
+    if (!el.classList.contains('hidden-by-filter')) el.style.display = '';
+  });
+}
   })();
 </script>
 
