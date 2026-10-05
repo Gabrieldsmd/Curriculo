@@ -46,28 +46,20 @@
      /* certificacoes lado a lado */
 .complement-grid {
   display: flex;
-  flex-wrap: wrap;   /* quebra linha se não couber */
-  gap: 20px;         /* espaçamento entre os cards */
-  justify-content: flex-start; /* ou center, se quiser centralizar tudo */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* ou center */
 }
 
 .course-card {
+  flex: 1 1 300px;
+  background: #f9fcff;
+  border-radius: 24px;
+  padding: 14px 16px;
+  border: 1px solid #d2e2f5;
   display: flex;
-  flex-direction: column; /* empilha imagem em cima e texto embaixo */
-  align-items: center;    /* centraliza horizontalmente */
-  text-align: center;     /* centraliza o texto */
-  background: none;
-  border: none;
-  padding: 10px;
-}
-.course-card img {
-  width: 120px;   /* ajuste conforme necessário */
-  height: auto;
-  margin-bottom: 8px; /* espaço entre imagem e texto */
-}
-.course-card div {
-  font-weight: 600;
-  color: #1e3a5f;
+  align-items: center;
+  gap: 14px;
 }
 
     
