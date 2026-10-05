@@ -43,7 +43,26 @@
       transition: all 0.2s;
       border: 1px solid #d9e2ef;
     }
+     /* certificacoes lado a lado */
+    .complement-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* ou center */
+    }
 
+    .course-card {
+    flex: 1 1 300px;
+    background: #f9fcff;
+    border-radius: 24px;
+    padding: 14px 16px;
+    border: 1px solid #d2e2f5;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    }
+
+    
     /* cabeçalho com foto e bandeiras */
     .header-flex {
       display: flex;
@@ -712,20 +731,26 @@
     compartilhar conhecimentos e fazer parte de uma equipe colaborativa, gerando impacto positivo e fortalecendo a cultura de melhoria contínua.
   </p>
   
-  <!-- CERTIFICAÇÕES CISCO -->
-  <h2>Certificações</h2>
+<!-- CERTIFICAÇÕES CISCO -->
+<h2>Certificações</h2>
 <div class="complement-grid" id="complement-grid">
-    <!-- Cada card com data-categories -->
-    <div class="course-card filterable-item" data-categories="ti,adm-ti">
-      
-      <img src="Imagens/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity - Issued by Cisco">
-      <div><strong>CISCO</strong><br><a href="https://drive.google.com/file/d/15BYo8Q-Hhhoem56YELcqoznTbR41E-6J/view" data-categories="ti,adm-ti">IntroCyber </a>,
-
-      <img src="Imagens/digital-safety-and-security-awareness.png" alt="Digital Safety and Security Awareness - Issued by Cisco">
-      <div><strong>CISCO</strong><br><a href="https://drive.google.com/file/d/1v_yuQw_uxTj2O9RqOOli5Z4TEptNjgtT/view" data-categories="ti,adm-ti">DSSA </a>
-      
-      </div>
+  <div class="course-card filterable-item" data-categories="ti,adm-ti">
+    <img src="Imagens/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity - Issued by Cisco">
+    <div>
+      <strong>CISCO</strong><br>
+      <a href="https://drive.google.com/file/d/15BYo8Q-Hhhoem56YELcqoznTbR41E-6J/view" data-categories="ti,adm-ti">IntroCyber</a>
     </div>
+  </div>
+
+  <div class="course-card filterable-item" data-categories="ti,adm-ti">
+    <img src="Imagens/digital-safety-and-security-awareness.png" alt="Digital Safety and Security Awareness - Issued by Cisco">
+    <div>
+      <strong>CISCO</strong><br>
+      <a href="https://drive.google.com/file/d/1v_yuQw_uxTj2O9RqOOli5Z4TEptNjgtT/view" data-categories="ti,adm-ti">DSSA</a>
+    </div>
+  </div>
+</div>
+
  
   <!-- RODAPÉ com image7 link -->
   <div class="footer-lattes">
