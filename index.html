@@ -44,23 +44,31 @@
       border: 1px solid #d9e2ef;
     }
      /* certificacoes lado a lado */
-    .complement-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start; /* ou center */
-    }
+.complement-grid {
+  display: flex;
+  flex-wrap: wrap;   /* quebra linha se não couber */
+  gap: 20px;         /* espaçamento entre os cards */
+  justify-content: flex-start; /* ou center, se quiser centralizar tudo */
+}
 
-    .course-card {
-    flex: 1 1 300px;
-    background: #f9fcff;
-    border-radius: 24px;
-    padding: 14px 16px;
-    border: 1px solid #d2e2f5;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    }
+.course-card {
+  display: flex;
+  flex-direction: column; /* empilha imagem em cima e texto embaixo */
+  align-items: center;    /* centraliza horizontalmente */
+  text-align: center;     /* centraliza o texto */
+  background: none;
+  border: none;
+  padding: 10px;
+}
+.course-card img {
+  width: 120px;   /* ajuste conforme necessário */
+  height: auto;
+  margin-bottom: 8px; /* espaço entre imagem e texto */
+}
+.course-card div {
+  font-weight: 600;
+  color: #1e3a5f;
+}
 
     
     /* cabeçalho com foto e bandeiras */
@@ -735,18 +743,27 @@
 <h2>Certificações</h2>
 <div class="complement-grid" id="complement-grid">
   <div class="course-card filterable-item" data-categories="ti,adm-ti">
-    <img src="Imagens/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity - Issued by Cisco">
-    <div>
-      <a href="https://drive.google.com/file/d/15BYo8Q-Hhhoem56YELcqoznTbR41E-6J/view" data-categories="ti,adm-ti">IntroCyber</a>
-    </div>
+    <a href="https://drive.google.com/file/d/15BYo8Q-Hhhoem56YELcqoznTbR41E-6J/view">
+      <img src="Imagens/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity - Issued by Cisco">
+      <div>IntroCyber</div>
+    </a>
   </div>
 
   <div class="course-card filterable-item" data-categories="ti,adm-ti">
-    <a href="https://drive.google.com/file/d/1v_yuQw_uxTj2O9RqOOli5Z4TEptNjgtT/view" data-categories="ti,adm-ti" img src="Imagens/digital-safety-and-security-awareness.png" alt="Digital Safety and Security Awareness - Issued by Cisco">
-    <div>DSSA</a>
-    </div>
+    <a href="https://drive.google.com/file/d/1v_yuQw_uxTj2O9RqOOli5Z4TEptNjgtT/view">
+      <img src="Imagens/digital-safety-and-security-awareness.png" alt="Digital Safety and Security Awareness - Issued by Cisco">
+      <div>DSSA</div>
+    </a>
+  </div>
+
+  <div class="course-card filterable-item" data-categories="ti,adm-ti">
+    <a href="#">
+      <img src="#" alt="Networking Basics - Issued by Cisco">
+      <div>CCNA</div>
+    </a>
   </div>
 </div>
+
 
  
   <!-- RODAPÉ com image7 link -->
